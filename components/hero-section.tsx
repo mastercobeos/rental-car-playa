@@ -341,7 +341,7 @@ export function HeroSection() {
                       <option value="Kia Sorento">Kia Sorento (7 seats)</option>
                       <option value="Suzuki Ertiga">Suzuki Ertiga (7 seats)</option>
                       <option value="Toyota Avanza">Toyota Avanza (7 seats)</option>
-                      <option value="Toyota Raize">Toyota Raize</option>
+                      <option value="Toyota Yaris">Toyota Yaris</option>
                       <option value="Mitsubishi Xpander Cross">Mitsubishi Xpander Cross (7 seats)</option>
                       <option value="Toyota RAV4">Toyota RAV4</option>
                       <option value="BYD Song Plus">BYD Song Plus</option>
