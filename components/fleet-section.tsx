@@ -126,7 +126,7 @@ const vehicles = [
       en: "Sporty sedan with modern features and responsive handling. A fun drive with plenty of cargo space for beach gear.",
       es: "Sedán deportivo con características modernas y manejo responsivo. Divertido de manejar con amplio espacio para equipo de playa.",
     },
-    images: ["/fleet/kia-forte-clean.jpg"],
+    images: ["/fleet/kia-forte-new.jpg"],
     price: 55,
   },
   // SUVs & VANS
