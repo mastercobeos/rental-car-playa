@@ -157,7 +157,7 @@ const vehicles = [
       en: "Versatile 7-seat MPV combining comfort and space. Great for family road trips through the Yucatan Peninsula.",
       es: "MPV versátil de 7 asientos que combina comodidad y espacio. Ideal para viajes familiares por la Península de Yucatán.",
     },
-    images: ["/fleet/suzuki-ertiga-clean.jpg"],
+    images: ["/fleet/suzuki-ertiga-new.jpg"],
     price: 65,
   },
   {
