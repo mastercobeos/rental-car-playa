@@ -7,7 +7,22 @@ import { cn } from "@/lib/utils"
 import { useLanguage } from "@/lib/language-context"
 
 const vehicles = [
-  // SEDANES
+  // COMPACTOS (5 plazas - económicos)
+  {
+    id: 8,
+    name: "Chevrolet Aveo Hatchback",
+    category: "compacto",
+    transmission: "Automático",
+    passengers: 5,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Agile hatchback perfect for navigating Playa del Carmen streets. Compact size with surprising interior space and easy parking.",
+      es: "Hatchback ágil perfecto para las calles de Playa del Carmen. Tamaño compacto con sorprendente espacio interior y fácil estacionamiento.",
+    },
+    images: ["/fleet/chevrolet-aveo-hatchback-new2.jpg"],
+    price: 65,
+  },
   {
     id: 1,
     name: "Chevrolet Aveo Sedan",
@@ -23,6 +38,7 @@ const vehicles = [
     images: ["/fleet/aveo-sedan-new.png"],
     price: 70,
   },
+  // SEDANES (5 plazas - automáticos)
   {
     id: 2,
     name: "Kia K3",
@@ -51,6 +67,21 @@ const vehicles = [
       es: "Sedán confiable y versátil disponible en automático o manual. Cómodo para explorar la costa de la Riviera Maya.",
     },
     images: ["/fleet/kia-rio-clean3.jpg"],
+    price: 75,
+  },
+  {
+    id: 9,
+    name: "Kia Forte",
+    category: "sedan",
+    transmission: "Automático",
+    passengers: 5,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Sporty sedan with modern features and responsive handling. A fun drive with plenty of cargo space for beach gear.",
+      es: "Sedán deportivo con características modernas y manejo responsivo. Divertido de manejar con amplio espacio para equipo de playa.",
+    },
+    images: ["/fleet/kia-forte-new.jpg"],
     price: 75,
   },
   {
@@ -84,6 +115,21 @@ const vehicles = [
     price: 75,
   },
   {
+    id: 13,
+    name: "Toyota Yaris",
+    category: "sedan",
+    transmission: "Automático",
+    passengers: 5,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Reliable Toyota sedan with excellent fuel economy. Compact and easy to drive, perfect for couples or small families exploring the Riviera Maya.",
+      es: "Sedán Toyota confiable con excelente rendimiento de combustible. Compacto y fácil de manejar, perfecto para parejas o familias pequeñas explorando la Riviera Maya.",
+    },
+    images: ["/fleet/toyota-yaris-new.webp"],
+    price: 75,
+  },
+  {
     id: 7,
     name: "Volkswagen Virtus",
     category: "sedan",
@@ -98,53 +144,38 @@ const vehicles = [
     images: ["/fleet/volkswagen-virtus-clean.jpg"],
     price: 75,
   },
-  // COMPACTOS
+  // SUVs (5 plazas)
   {
-    id: 8,
-    name: "Chevrolet Aveo Hatchback",
-    category: "compacto",
-    transmission: "Automático",
-    passengers: 5,
-    doors: 4,
-    ac: true,
-    description: {
-      en: "Agile hatchback perfect for navigating Playa del Carmen streets. Compact size with surprising interior space and easy parking.",
-      es: "Hatchback ágil perfecto para las calles de Playa del Carmen. Tamaño compacto con sorprendente espacio interior y fácil estacionamiento.",
-    },
-    images: ["/fleet/chevrolet-aveo-hatchback-new2.jpg"],
-    price: 65,
-  },
-  {
-    id: 9,
-    name: "Kia Forte",
-    category: "sedan",
-    transmission: "Automático",
-    passengers: 5,
-    doors: 4,
-    ac: true,
-    description: {
-      en: "Sporty sedan with modern features and responsive handling. A fun drive with plenty of cargo space for beach gear.",
-      es: "Sedán deportivo con características modernas y manejo responsivo. Divertido de manejar con amplio espacio para equipo de playa.",
-    },
-    images: ["/fleet/kia-forte-new.jpg"],
-    price: 75,
-  },
-  // SUVs & VANS
-  {
-    id: 10,
-    name: "Kia Sorento",
+    id: 15,
+    name: "Toyota RAV4",
     category: "suv",
     transmission: "Automático",
-    passengers: 7,
+    passengers: 5,
     doors: 4,
     ac: true,
     description: {
-      en: "Full-size 7-seat SUV with powerful performance. Perfect for large families or groups exploring cenotes, ruins, and beaches.",
-      es: "SUV de 7 asientos con rendimiento potente. Perfecto para familias grandes o grupos explorando cenotes, ruinas y playas.",
+      en: "Popular mid-size SUV known worldwide for reliability. Powerful, comfortable, and perfect for adventurous day trips.",
+      es: "SUV mediano popular y reconocido mundialmente por su confiabilidad. Potente, cómodo y perfecto para aventuras de día.",
     },
-    images: ["/fleet/kia-sorento-new.webp"],
-    price: 220,
+    images: ["/fleet/toyota-rav4-clean.jpg"],
+    price: 100,
   },
+  {
+    id: 16,
+    name: "BYD Song Plus",
+    category: "suv",
+    transmission: "Automático",
+    passengers: 5,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Modern hybrid SUV with cutting-edge technology and smooth electric driving. Eco-friendly luxury for your vacation.",
+      es: "SUV híbrido moderno con tecnología de punta y manejo eléctrico suave. Lujo ecológico para tus vacaciones.",
+    },
+    images: ["/fleet/byd-song-plus-new.png"],
+    price: 112,
+  },
+  // CAMIONETAS (7 plazas)
   {
     id: 11,
     name: "Suzuki Ertiga",
@@ -177,21 +208,6 @@ const vehicles = [
     price: 112,
   },
   {
-    id: 13,
-    name: "Toyota Yaris",
-    category: "sedan",
-    transmission: "Automático",
-    passengers: 5,
-    doors: 4,
-    ac: true,
-    description: {
-      en: "Reliable Toyota sedan with excellent fuel economy. Compact and easy to drive, perfect for couples or small families exploring the Riviera Maya.",
-      es: "Sedán Toyota confiable con excelente rendimiento de combustible. Compacto y fácil de manejar, perfecto para parejas o familias pequeñas explorando la Riviera Maya.",
-    },
-    images: ["/fleet/toyota-yaris-new.webp"],
-    price: 75,
-  },
-  {
     id: 14,
     name: "Mitsubishi Xpander Cross",
     category: "suv",
@@ -207,34 +223,35 @@ const vehicles = [
     price: 112,
   },
   {
-    id: 15,
-    name: "Toyota RAV4",
+    id: 10,
+    name: "Kia Sorento",
     category: "suv",
     transmission: "Automático",
-    passengers: 5,
+    passengers: 7,
     doors: 4,
     ac: true,
     description: {
-      en: "Popular mid-size SUV known worldwide for reliability. Powerful, comfortable, and perfect for adventurous day trips.",
-      es: "SUV mediano popular y reconocido mundialmente por su confiabilidad. Potente, cómodo y perfecto para aventuras de día.",
+      en: "Full-size 7-seat SUV with powerful performance. Perfect for large families or groups exploring cenotes, ruins, and beaches.",
+      es: "SUV de 7 asientos con rendimiento potente. Perfecto para familias grandes o grupos explorando cenotes, ruinas y playas.",
     },
-    images: ["/fleet/toyota-rav4-clean.jpg"],
-    price: 100,
+    images: ["/fleet/kia-sorento-new.webp"],
+    price: 220,
   },
+  // VANS (12 plazas)
   {
-    id: 16,
-    name: "BYD Song Plus",
+    id: 20,
+    name: "Nissan Urvan",
     category: "suv",
-    transmission: "Automático",
-    passengers: 5,
+    transmission: "Manual",
+    passengers: 12,
     doors: 4,
     ac: true,
     description: {
-      en: "Modern hybrid SUV with cutting-edge technology and smooth electric driving. Eco-friendly luxury for your vacation.",
-      es: "SUV híbrido moderno con tecnología de punta y manejo eléctrico suave. Lujo ecológico para tus vacaciones.",
+      en: "Spacious 12-passenger van available for daily rental. Perfect for large groups exploring the Riviera Maya together.",
+      es: "Van espaciosa de 12 pasajeros disponible para renta diaria. Perfecta para grupos grandes explorando juntos la Riviera Maya.",
     },
-    images: ["/fleet/byd-song-plus-new.png"],
-    price: 112,
+    images: ["/fleet/nissan-urvan-white-3q.jpg"],
+    price: 220,
   },
   // MOTOS
   {
@@ -253,23 +270,7 @@ const vehicles = [
     },
     images: ["/fleet/italika-black.jpg"],
     flipImage: true,
-    price: 20,
-  },
-  // VANS
-  {
-    id: 20,
-    name: "Nissan Urvan",
-    category: "suv",
-    transmission: "Manual",
-    passengers: 12,
-    doors: 4,
-    ac: true,
-    description: {
-      en: "Spacious 12-passenger van available for daily rental. Perfect for large groups exploring the Riviera Maya together.",
-      es: "Van espaciosa de 12 pasajeros disponible para renta diaria. Perfecta para grupos grandes explorando juntos la Riviera Maya.",
-    },
-    images: ["/fleet/nissan-urvan-white-3q.jpg"],
-    price: 220,
+    price: 30,
   },
   // TRANSFER
   {

@@ -7,20 +7,20 @@ import { useLanguage } from "@/lib/language-context"
 
 const heroImages = [
   {
-    src: "/WhatsApp Image 2026-03-21 at 15.44.45.jpeg",
-    alt: "SUV rental for Riviera Maya road trip - Playa del Carmen car rental",
+    src: "/hero/family-beach.jpg",
+    alt: "Happy family enjoying a beach vacation in Playa del Carmen, Riviera Maya",
   },
   {
-    src: "/WhatsApp Image 2026-03-21 at 15.46.05.jpeg",
-    alt: "Sedan car available for rent in Playa del Carmen Mexico",
+    src: "/hero/chichen-itza.jpg",
+    alt: "Chichen Itza pyramid - explore Mayan ruins with a rental car from Playa del Carmen",
   },
   {
-    src: "/WhatsApp Image 2026-03-21 at 15.46.52.jpeg",
-    alt: "Toyota RAV4 rental car for Cancun airport pickup service",
+    src: "/hero/cenote.jpg",
+    alt: "Swimming in a cenote - discover hidden cenotes in the Riviera Maya",
   },
   {
-    src: "/WhatsApp Image 2026-03-21 at 15.50.06.jpeg",
-    alt: "Premium car rental fleet in Playa del Carmen with partial insurance included",
+    src: "/hero/tulum-ruins.jpg",
+    alt: "Tourist exploring Tulum Mayan ruins - day trip from Playa del Carmen",
   },
 ]
 
@@ -35,6 +35,8 @@ export function HeroSection() {
   const [phoneCode, setPhoneCode] = useState("+1")
   const [phone, setPhone] = useState("")
   const [currentImage, setCurrentImage] = useState(0)
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
   const { t, language } = useLanguage()
 
   const locationLabels: Record<string, string> = {
@@ -46,7 +48,7 @@ export function HeroSection() {
 
   const vehicleLabels: Record<string, string> = {}
 
-  const handleReserve = () => {
+  const handleReserve = async () => {
     const locationName = locationLabels[pickupLocation] || (language === "en" ? "Not selected" : "No seleccionado")
     const vehicleName = vehicleType || (language === "en" ? "Any" : "Cualquiera")
     const pickup = pickupDate || (language === "en" ? "Not selected" : "No seleccionada")
@@ -59,9 +61,35 @@ export function HeroSection() {
       ? `Hello! I'd like to reserve a car 🚗\n\n👤 *Name:* ${name}\n📧 *Email:* ${contactEmail}\n📱 *Phone:* ${contactPhone}\n\n📍 *Pickup Location:* ${locationName}\n🚘 *Vehicle Type:* ${vehicleName}\n📅 *Pickup Date:* ${pickup}\n📅 *Return Date:* ${returnD}\n🕐 *Pickup Time:* ${pickupTime}\n\nCould you confirm availability? Thank you!`
       : `¡Hola! Me gustaría reservar un auto 🚗\n\n👤 *Nombre:* ${name}\n📧 *Correo:* ${contactEmail}\n📱 *Teléfono:* ${contactPhone}\n\n📍 *Lugar de Recogida:* ${locationName}\n🚘 *Tipo de Vehículo:* ${vehicleName}\n📅 *Fecha de Recogida:* ${pickup}\n📅 *Fecha de Devolución:* ${returnD}\n🕐 *Hora de Recogida:* ${pickupTime}\n\n¿Podrían confirmar disponibilidad? ¡Gracias!`
 
+    // Send WhatsApp
     const whatsappNumber = "529902031942"
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
+
+    // Send email in background
+    setSending(true)
+    try {
+      await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: contactEmail,
+          phone: contactPhone,
+          pickupLocation: locationName,
+          vehicleType: vehicleName,
+          pickupDate: pickup,
+          returnDate: returnD,
+          pickupTime,
+        }),
+      })
+      setSent(true)
+      setTimeout(() => setSent(false), 5000)
+    } catch {
+      // Email failed silently, WhatsApp already sent
+    } finally {
+      setSending(false)
+    }
   }
 
   useEffect(() => {
@@ -150,7 +178,7 @@ export function HeroSection() {
               <div className="flex-1 text-center">
                 <div className="flex items-center justify-center gap-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                  <span className="text-xl font-extrabold text-primary">4.9</span>
+                  <span className="text-xl font-extrabold text-primary">5.0</span>
                 </div>
                 <p className="text-[10px] text-muted-foreground font-medium">{t("Rating", "Calificación")}</p>
               </div>
@@ -418,12 +446,26 @@ export function HeroSection() {
 
               <Button
                 type="submit"
-                className="col-span-2 md:col-span-3 lg:col-span-1 w-full px-6 py-4 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                disabled={sending}
+                className="col-span-2 md:col-span-3 lg:col-span-1 w-full px-6 py-4 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-70"
               >
-                {t("Reserve Now", "Reserva Ya")}
+                {sending ? t("Sending...", "Enviando...") : t("Reserve Now", "Reserva Ya")}
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
+
+            {/* Success message */}
+            {sent && (
+              <div className="mt-3 flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm animate-in fade-in slide-in-from-top-2">
+                <svg className="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {t(
+                  "Your reservation was sent via WhatsApp and email. We'll confirm shortly!",
+                  "Tu reservación fue enviada por WhatsApp y correo. Te confirmaremos pronto!"
+                )}
+              </div>
+            )}
           </form>
         </div>
       </div>
