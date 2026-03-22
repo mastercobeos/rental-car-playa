@@ -73,7 +73,7 @@ export function ReviewsSection() {
   }, [])
 
   return (
-    <section id="reviews" className="py-24 bg-secondary/20" aria-label="Customer reviews and testimonials">
+    <section id="reviews" className="py-12 sm:py-16 lg:py-24 bg-secondary/20" aria-label="Customer reviews and testimonials">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">

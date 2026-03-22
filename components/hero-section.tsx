@@ -72,7 +72,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="booking" className="pt-24 md:pt-28 pb-4 bg-gradient-to-br from-background via-background to-primary/5 flex flex-col justify-center gap-6 relative overflow-hidden h-screen">
+    <section id="booking" className="pt-20 md:pt-24 lg:pt-28 pb-4 bg-gradient-to-br from-background via-background to-primary/5 flex flex-col justify-center gap-4 md:gap-6 relative overflow-hidden min-h-screen lg:h-screen">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
@@ -80,7 +80,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Left - Text Content */}
-          <div className="py-2">
+          <div className="py-1 md:py-2">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/25 rounded-full px-4 py-1.5 mb-2 shadow-sm">
               <MapPin className="w-3.5 h-3.5 text-primary" />
@@ -90,7 +90,7 @@ export function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold leading-[1.05] mb-2 tracking-tight text-foreground">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold leading-[1.05] mb-2 tracking-tight text-foreground">
               {t("Your adventure", "Tu aventura")}{" "}
               <br className="hidden md:block" />
               {t("starts ", "empieza ")}{" "}
@@ -180,7 +180,7 @@ export function HeroSection() {
           </div>
 
           {/* Right - Photo Slider */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-h-[420px] mx-auto lg:mx-0 w-full max-w-[380px] lg:max-w-none bg-gradient-to-b from-sky-100/50 to-green-50/50">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-[3/4] max-h-[250px] md:max-h-[350px] lg:max-h-[420px] mx-auto lg:mx-0 w-full max-w-[320px] md:max-w-[380px] lg:max-w-none bg-gradient-to-b from-sky-100/50 to-green-50/50">
             {heroImages.map((image, index) => (
               <img
                 key={image.src}
@@ -291,8 +291,8 @@ export function HeroSection() {
             </div>
 
             {/* Row 2: Reservation details */}
-            <div className="flex flex-col md:flex-row items-end gap-2">
-              <div className="flex-1 w-full">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-end gap-2">
+              <div className="col-span-2 md:col-span-1">
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Pickup Location", "Lugar Recogida")}
                 </label>
@@ -313,7 +313,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex-1 w-full">
+              <div className="col-span-2 md:col-span-1">
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Vehicle Type", "Tipo Vehículo")}
                 </label>
@@ -358,7 +358,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex-1 w-full">
+              <div>
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Pickup Date", "Fecha Recogida")}
                 </label>
@@ -373,7 +373,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex-1 w-full">
+              <div>
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Return", "Devolución")}
                 </label>
@@ -388,7 +388,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="flex-1 w-full">
+              <div>
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Pickup Time", "Hora Recogida")}
                 </label>
@@ -418,7 +418,7 @@ export function HeroSection() {
 
               <Button
                 type="submit"
-                className="w-full md:w-auto px-6 py-4 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                className="col-span-2 md:col-span-3 lg:col-span-1 w-full px-6 py-4 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
               >
                 {t("Reserve Now", "Reserva Ya")}
                 <ArrowRight className="h-4 w-4" />

@@ -11,9 +11,9 @@ export function Footer() {
     <footer className="bg-primary text-white">
       <div className="container mx-auto px-4">
         {/* Main Footer */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="py-10 sm:py-16 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img
                 src="/logo. png.png"

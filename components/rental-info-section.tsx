@@ -7,7 +7,7 @@ export function RentalInfoSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-12 sm:py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-semibold text-xs uppercase tracking-widest">

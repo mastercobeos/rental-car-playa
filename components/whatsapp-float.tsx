@@ -10,7 +10,7 @@ export function WhatsAppFloat() {
       href={`https://wa.me/529902031942?text=${encodeURIComponent(t("Hi! I saw your website and I'm interested in renting a car", "Hola! Vi su página web y me interesa rentar un auto"))}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1da851] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#1da851] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
       aria-label={t("Chat on WhatsApp", "Escríbenos por WhatsApp")}
     >
       <svg className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">

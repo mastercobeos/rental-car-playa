@@ -58,7 +58,7 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="py-20 bg-background">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -80,39 +80,39 @@ export function FeaturesSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
+              className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-card-foreground mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-card-foreground mb-2 sm:mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm lg:text-base">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* Stats Banner */}
-        <div className="mt-20 py-12 px-8 rounded-2xl bg-card border border-primary/20 relative overflow-hidden">
+        <div className="mt-12 sm:mt-16 lg:mt-20 py-8 sm:py-12 px-4 sm:px-8 rounded-2xl bg-card border border-primary/20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10" />
-          <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1 sm:mb-2">500+</div>
               <p className="text-muted-foreground text-sm">{t("Happy Customers", "Clientes Satisfechos")}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1 sm:mb-2">50+</div>
               <p className="text-muted-foreground text-sm">{t("Vehicles in Fleet", "Vehículos en Flota")}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">4.9</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1 sm:mb-2">4.9</div>
               <p className="text-muted-foreground text-sm">{t("Average Rating", "Calificación Promedio")}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">8+</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1 sm:mb-2">8+</div>
               <p className="text-muted-foreground text-sm">{t("Years Experience", "Años de Experiencia")}</p>
             </div>
           </div>

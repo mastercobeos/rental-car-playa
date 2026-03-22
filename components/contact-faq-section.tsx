@@ -70,7 +70,7 @@ export function ContactFAQSection() {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-background" aria-label="Contact and FAQ">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-background" aria-label="Contact and FAQ">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

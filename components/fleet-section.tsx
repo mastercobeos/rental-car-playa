@@ -330,7 +330,7 @@ export function FleetSection() {
   }
 
   return (
-    <section id="fleet" className="py-20 bg-secondary/20" aria-label="Our car rental fleet - sedans, SUVs, and motorcycles">
+    <section id="fleet" className="py-12 sm:py-16 lg:py-20 bg-secondary/20" aria-label="Our car rental fleet - sedans, SUVs, and motorcycles">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -349,13 +349,13 @@ export function FleetSection() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex overflow-x-auto sm:flex-wrap sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={cn(
-                "px-6 py-2.5 rounded-full font-medium transition-all text-sm",
+                "px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium transition-all text-xs sm:text-sm whitespace-nowrap flex-shrink-0",
                 activeCategory === category.id
                   ? "bg-primary text-white shadow-lg shadow-primary/25"
                   : "bg-white border border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
@@ -493,18 +493,18 @@ export function FleetSection() {
 
       {/* Gallery Modal */}
       {selectedVehicle && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={closeGallery}>
-          <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4" onClick={closeGallery}>
+          <div className="relative max-w-3xl w-full max-h-[95vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             {/* Close button */}
             <button
               onClick={closeGallery}
-              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              className="absolute top-0 right-0 sm:-top-12 sm:right-0 z-10 text-white/70 hover:text-white transition-colors bg-black/50 sm:bg-transparent rounded-full p-2"
             >
-              <X className="h-8 w-8" />
+              <X className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
 
             {/* Vehicle name */}
-            <h3 className="text-white text-2xl font-bold mb-4">{selectedVehicle.name}</h3>
+            <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4 pr-10 sm:pr-0">{selectedVehicle.name}</h3>
 
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden bg-black">
