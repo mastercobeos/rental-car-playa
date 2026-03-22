@@ -136,7 +136,7 @@ export function ContactFAQSection() {
               <div>
                 <h3 className="font-bold text-foreground text-sm">{t("Hours", "Horario")}</h3>
                 <p className="text-muted-foreground text-sm">{t("Monday - Sunday", "Lunes - Domingo")}</p>
-                <p className="text-xs text-muted-foreground">8:00 AM - 8:00 PM</p>
+                <p className="text-xs text-muted-foreground">8:00 AM - 7:00 PM</p>
               </div>
             </div>
 

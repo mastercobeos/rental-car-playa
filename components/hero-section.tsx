@@ -20,7 +20,7 @@ const heroImages = [
   },
   {
     src: "/WhatsApp Image 2026-03-21 at 15.50.06.jpeg",
-    alt: "Premium car rental fleet in Playa del Carmen with full insurance included",
+    alt: "Premium car rental fleet in Playa del Carmen with partial insurance included",
   },
 ]
 
@@ -114,7 +114,7 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-2 mb-3">
               <div className="flex items-center gap-1.5 bg-white border border-primary/20 rounded-full px-3 py-1.5 shadow-sm">
                 <Shield className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                <span className="text-xs text-foreground font-medium">{t("Insurance Included", "Seguro Incluido")}</span>
+                <span className="text-xs text-foreground font-medium">{t("Partial Insurance", "Seguro Parcial")}</span>
               </div>
               <div className="flex items-center gap-1.5 bg-white border border-primary/20 rounded-full px-3 py-1.5 shadow-sm">
                 <Car className="w-3.5 h-3.5 text-primary flex-shrink-0" />

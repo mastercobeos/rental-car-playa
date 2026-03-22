@@ -97,7 +97,7 @@ export function ContactSection() {
                 <div>
                   <h4 className="text-foreground font-semibold mb-1">{t("Hours", "Horario")}</h4>
                   <p className="text-muted-foreground">
-                    {t("Monday - Sunday: 8:00 AM - 8:00 PM", "Lunes - Domingo: 8:00 AM - 8:00 PM")}
+                    {t("Monday - Sunday: 8:00 AM - 7:00 PM", "Lunes - Domingo: 8:00 AM - 7:00 PM")}
                   </p>
                 </div>
               </div>

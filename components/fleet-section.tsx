@@ -21,7 +21,7 @@ const vehicles = [
       es: "Sedán compacto, perfecto para manejar en la ciudad y viajes cortos por Playa del Carmen. Fácil de estacionar y muy confiable.",
     },
     images: ["/fleet/aveo-sedan-new.png"],
-    price: 45,
+    price: 70,
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const vehicles = [
       es: "Sedán moderno con diseño elegante y transmisión automática suave. Interior cómodo con excelente aire acondicionado para el calor tropical.",
     },
     images: ["/fleet/kia-k3-new.webp"],
-    price: 55,
+    price: 75,
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const vehicles = [
       es: "Sedán confiable y versátil disponible en automático o manual. Cómodo para explorar la costa de la Riviera Maya.",
     },
     images: ["/fleet/kia-rio-clean3.jpg"],
-    price: 50,
+    price: 75,
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const vehicles = [
       es: "Sedán espacioso con una de las cajuelas más grandes de su clase. Ideal para familias con equipaje que llegan del aeropuerto.",
     },
     images: ["/fleet/nissan-versa-new.png"],
-    price: 50,
+    price: 75,
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const vehicles = [
       es: "Sedán premium de tamaño medio con manejo refinado. Cómodo para viajes largos a Tulum, Mérida o Chichén Itzá.",
     },
     images: ["/fleet/nissan-sentra-clean.jpg"],
-    price: 55,
+    price: 75,
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const vehicles = [
       es: "Sedán de ingeniería alemana con excelente calidad de construcción y manejo suave. Disfruta una experiencia de conducción estilo europeo.",
     },
     images: ["/fleet/volkswagen-virtus-clean.jpg"],
-    price: 55,
+    price: 75,
   },
   // COMPACTOS
   {
@@ -112,7 +112,7 @@ const vehicles = [
       es: "Hatchback ágil perfecto para las calles de Playa del Carmen. Tamaño compacto con sorprendente espacio interior y fácil estacionamiento.",
     },
     images: ["/fleet/chevrolet-aveo-hatchback-new2.jpg"],
-    price: 40,
+    price: 65,
   },
   {
     id: 9,
@@ -127,7 +127,7 @@ const vehicles = [
       es: "Sedán deportivo con características modernas y manejo responsivo. Divertido de manejar con amplio espacio para equipo de playa.",
     },
     images: ["/fleet/kia-forte-new.jpg"],
-    price: 55,
+    price: 75,
   },
   // SUVs & VANS
   {
@@ -143,7 +143,7 @@ const vehicles = [
       es: "SUV de 7 asientos con rendimiento potente. Perfecto para familias grandes o grupos explorando cenotes, ruinas y playas.",
     },
     images: ["/fleet/kia-sorento-new.webp"],
-    price: 85,
+    price: 220,
   },
   {
     id: 11,
@@ -159,7 +159,7 @@ const vehicles = [
     },
     images: ["/fleet/suzuki-ertiga-new.png"],
     flipImage: true,
-    price: 65,
+    price: 112,
   },
   {
     id: 12,
@@ -174,7 +174,7 @@ const vehicles = [
       es: "Confiabilidad Toyota en un paquete espacioso de 7 asientos. Espacio para toda la familia y equipaje — ideal para recogidas en aeropuerto.",
     },
     images: ["/fleet/avanza-clean3.jpg"],
-    price: 65,
+    price: 112,
   },
   {
     id: 13,
@@ -189,7 +189,7 @@ const vehicles = [
       es: "Sedán Toyota confiable con excelente rendimiento de combustible. Compacto y fácil de manejar, perfecto para parejas o familias pequeñas explorando la Riviera Maya.",
     },
     images: ["/fleet/toyota-yaris-new.webp"],
-    price: 50,
+    price: 75,
   },
   {
     id: 14,
@@ -204,7 +204,7 @@ const vehicles = [
       es: "Crossover robusto con 7 asientos y altura al suelo elevada. Listo para cualquier camino — de carreteras a pueblos de playa.",
     },
     images: ["/fleet/mitsubishi-xpander-clean.jpg"],
-    price: 75,
+    price: 112,
   },
   {
     id: 15,
@@ -219,7 +219,7 @@ const vehicles = [
       es: "SUV mediano popular y reconocido mundialmente por su confiabilidad. Potente, cómodo y perfecto para aventuras de día.",
     },
     images: ["/fleet/toyota-rav4-clean.jpg"],
-    price: 85,
+    price: 100,
   },
   {
     id: 16,
@@ -234,26 +234,9 @@ const vehicles = [
       es: "SUV híbrido moderno con tecnología de punta y manejo eléctrico suave. Lujo ecológico para tus vacaciones.",
     },
     images: ["/fleet/byd-song-plus-new.png"],
-    price: 90,
+    price: 112,
   },
   // MOTOS
-  {
-    id: 17,
-    name: "Honda Scoopy 110",
-    category: "scooter",
-    transmission: "Automático",
-    passengers: 2,
-    doors: 0,
-    ac: false,
-    helmets: 2,
-    insuranceIncluded: true,
-    description: {
-      en: "Easy-to-ride automatic scooter — perfect for getting around Playa del Carmen. 2 helmets and insurance included.",
-      es: "Scooter automático fácil de manejar — perfecto para moverte por Playa del Carmen. 2 cascos y seguro incluidos.",
-    },
-    images: ["/fleet/scoopy-1.png"],
-    price: 25,
-  },
   {
     id: 18,
     name: "Italika Vitalia 150",
@@ -269,6 +252,7 @@ const vehicles = [
       es: "Motocicleta de 150cc perfecta para explorar Playa del Carmen y alrededores. Manejo cómodo con 2 cascos y seguro incluidos.",
     },
     images: ["/fleet/italika-black.jpg"],
+    flipImage: true,
     price: 20,
   },
   // VANS
@@ -284,8 +268,8 @@ const vehicles = [
       en: "Spacious 12-passenger van available for daily rental. Perfect for large groups exploring the Riviera Maya together.",
       es: "Van espaciosa de 12 pasajeros disponible para renta diaria. Perfecta para grupos grandes explorando juntos la Riviera Maya.",
     },
-    images: ["/fleet/nissan-urvan-new.webp"],
-    price: 150,
+    images: ["/fleet/nissan-urvan-white-3q.jpg"],
+    price: 220,
   },
   // TRANSFER
   {
@@ -297,11 +281,11 @@ const vehicles = [
     doors: 4,
     ac: true,
     description: {
-      en: "Private transfer service from Cancun Airport to your hotel. Comfortable 12-passenger van with A/C for your group.",
-      es: "Servicio de transfer privado del Aeropuerto de Cancún a tu hotel. Van cómoda de 12 pasajeros con A/C para tu grupo.",
+      en: "Private transfer service from Cancun Airport to Playa del Carmen. Comfortable 12-passenger van with A/C for your group.",
+      es: "Servicio de transfer privado del Aeropuerto de Cancún a Playa del Carmen. Van cómoda de 12 pasajeros con A/C para tu grupo.",
     },
-    images: ["/fleet/nissan-urvan-new.webp"],
-    price: 150,
+    images: ["/fleet/nissan-urvan-white-3q.jpg"],
+    price: 95,
   },
 ]
 

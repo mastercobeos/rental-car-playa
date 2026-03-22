@@ -46,7 +46,7 @@ export function LocationSection() {
                 </div>
                 <h3 className="font-bold text-foreground">{t("Hours", "Horario")}</h3>
               </div>
-              <p className="text-muted-foreground">8:00 AM - 8:00 PM</p>
+              <p className="text-muted-foreground">8:00 AM - 7:00 PM</p>
               <p className="text-muted-foreground text-sm">{t("Monday to Sunday", "Lunes a Domingo")}</p>
             </div>
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: 'Car Rental Playa del Carmen | Rent a Car Riviera Maya - Free Airport Pickup',
     template: '%s | Playa Car Rental',
   },
-  description: 'Rent a car in Playa del Carmen, Mexico. Free Cancun airport pickup, full insurance included, no hidden fees. SUVs, sedans & scooters. Trusted by 500+ American tourists. Book via WhatsApp now!',
+  description: 'Rent a car in Playa del Carmen, Mexico. Free Cancun airport pickup, insurance included, no hidden fees. SUVs, sedans & scooters. Trusted by 500+ American tourists. Book via WhatsApp now!',
   keywords: [
     'car rental playa del carmen',
     'rent a car cancun airport',
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Car Rental Playa del Carmen | Free Airport Pickup & Full Insurance',
-    description: 'Rent a car in Playa del Carmen. Free Cancun airport pickup, full insurance included. Trusted by 500+ American tourists.',
+    title: 'Car Rental Playa del Carmen | Free Airport Pickup & Insurance Included',
+    description: 'Rent a car in Playa del Carmen. Free Cancun airport pickup, insurance included. Trusted by 500+ American tourists.',
     images: ['/og-image.jpg'],
   },
   robots: {

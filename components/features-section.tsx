@@ -9,10 +9,10 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Shield,
-      title: t("Insurance Included", "Seguro Incluido"),
+      title: t("Partial Insurance Included", "Seguro Parcial Incluido"),
       description: t(
-        "Full insurance included with 10% deductible. Third-party liability coverage on every rental.",
-        "Seguro incluido con 10% de deducible. Cobertura de daños a terceros en cada renta."
+        "Partial insurance included with 10% deductible. Third-party liability coverage on every rental.",
+        "Seguro parcial incluido con 10% de deducible. Cobertura de daños a terceros en cada renta."
       ),
     },
     {
@@ -49,10 +49,10 @@ export function FeaturesSection() {
     },
     {
       icon: Clock,
-      title: t("Service 8 AM to 8 PM", "Atención 8 AM a 8 PM"),
+      title: t("Service 8 AM to 7 PM", "Atención 8 AM a 7 PM"),
       description: t(
-        "Available every day from 8 AM to 8 PM. Hotel delivery in Playa del Carmen included at no extra cost.",
-        "Disponibles todos los días de 8 AM a 8 PM. Entrega en hotel en Playa del Carmen sin costo adicional."
+        "Available every day from 8 AM to 7 PM. Hotel delivery in Playa del Carmen included at no extra cost.",
+        "Disponibles todos los días de 8 AM a 7 PM. Entrega en hotel en Playa del Carmen sin costo adicional."
       ),
     },
   ]
