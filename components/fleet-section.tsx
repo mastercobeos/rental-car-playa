@@ -158,6 +158,7 @@ const vehicles = [
       es: "MPV versátil de 7 asientos que combina comodidad y espacio. Ideal para viajes familiares por la Península de Yucatán.",
     },
     images: ["/fleet/suzuki-ertiga-new.png"],
+    flipImage: true,
     price: 65,
   },
   {
@@ -379,7 +380,7 @@ export function FleetSection() {
                 <img
                   src={vehicle.images[0]}
                   alt={`${vehicle.name} for rent in Playa del Carmen - ${vehicle.transmission} ${vehicle.passengers} passengers`}
-                  className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  className={`absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 ${(vehicle as any).flipImage ? '[transform:scaleX(-1)]' : ''}`}
                   loading="lazy"
                   width={600}
                   height={400}
