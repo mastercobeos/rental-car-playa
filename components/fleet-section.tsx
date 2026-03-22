@@ -271,6 +271,22 @@ const vehicles = [
     images: ["/fleet/italika-black.jpg"],
     price: 20,
   },
+  // VANS
+  {
+    id: 20,
+    name: "Nissan Urvan",
+    category: "suv",
+    transmission: "Manual",
+    passengers: 12,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Spacious 12-passenger van available for daily rental. Perfect for large groups exploring the Riviera Maya together.",
+      es: "Van espaciosa de 12 pasajeros disponible para renta diaria. Perfecta para grupos grandes explorando juntos la Riviera Maya.",
+    },
+    images: ["/fleet/nissan-urvan-new.webp"],
+    price: 150,
+  },
   // TRANSFER
   {
     id: 19,
@@ -281,8 +297,8 @@ const vehicles = [
     doors: 4,
     ac: true,
     description: {
-      en: "Spacious 12-passenger van perfect for group transfers from Cancun Airport to your hotel. Ideal for large families or groups.",
-      es: "Van espaciosa de 12 pasajeros perfecta para transfer grupal del Aeropuerto de Cancún a tu hotel. Ideal para familias grandes o grupos.",
+      en: "Private transfer service from Cancun Airport to your hotel. Comfortable 12-passenger van with A/C for your group.",
+      es: "Servicio de transfer privado del Aeropuerto de Cancún a tu hotel. Van cómoda de 12 pasajeros con A/C para tu grupo.",
     },
     images: ["/fleet/nissan-urvan-new.webp"],
     price: 150,
