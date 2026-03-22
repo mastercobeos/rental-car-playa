@@ -35,7 +35,7 @@ const vehicles = [
       en: "Modern sedan with sleek design and smooth automatic transmission. Comfortable interior with excellent air conditioning for the tropical heat.",
       es: "Sedán moderno con diseño elegante y transmisión automática suave. Interior cómodo con excelente aire acondicionado para el calor tropical.",
     },
-    images: ["/fleet/kia-k3-clean.jpg"],
+    images: ["/fleet/kia-k3-new.webp"],
     price: 55,
   },
   {
