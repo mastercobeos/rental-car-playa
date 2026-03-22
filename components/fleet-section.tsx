@@ -20,7 +20,7 @@ const vehicles = [
       en: "Compact sedan, perfect for city driving and short trips around Playa del Carmen. Easy to park and very reliable.",
       es: "Sedán compacto, perfecto para manejar en la ciudad y viajes cortos por Playa del Carmen. Fácil de estacionar y muy confiable.",
     },
-    images: ["/fleet/aveo-sedan-cropped.jpg"],
+    images: ["/fleet/aveo-sedan-new.png"],
     price: 45,
   },
   {
