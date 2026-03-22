@@ -274,7 +274,7 @@ const vehicles = [
   // TRANSFER
   {
     id: 19,
-    name: "Sprinter / Van 12 Pasajeros",
+    name: "Nissan Urvan",
     category: "transfer",
     transmission: "Manual",
     passengers: 12,
@@ -284,7 +284,7 @@ const vehicles = [
       en: "Spacious 12-passenger van perfect for group transfers from Cancun Airport to your hotel. Ideal for large families or groups.",
       es: "Van espaciosa de 12 pasajeros perfecta para transfer grupal del Aeropuerto de Cancún a tu hotel. Ideal para familias grandes o grupos.",
     },
-    images: ["/fleet/sprinter-white-clean.jpg"],
+    images: ["/fleet/nissan-urvan-new.webp"],
     price: 150,
   },
 ]

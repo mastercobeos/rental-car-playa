@@ -351,7 +351,7 @@ export function HeroSection() {
                       <option value="Italika Vitalia 150">Italika Vitalia 150</option>
                     </optgroup>
                     <optgroup label="Transfer">
-                      <option value="Sprinter / Van 12 Pasajeros">Sprinter / Van 12 Pasajeros</option>
+                      <option value="Nissan Urvan 12 Pasajeros">Nissan Urvan 12 Pasajeros</option>
                     </optgroup>
                   </select>
                   <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
