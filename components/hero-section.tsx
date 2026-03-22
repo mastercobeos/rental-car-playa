@@ -180,15 +180,15 @@ export function HeroSection() {
           </div>
 
           {/* Right - Photo Slider */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/10] lg:aspect-auto lg:min-h-[280px] lg:h-[38vh] lg:max-h-[400px] ring-2 ring-primary/30 ring-offset-4 ring-offset-background">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-h-[420px] mx-auto lg:mx-0 w-full max-w-[380px] lg:max-w-none bg-gradient-to-b from-sky-100/50 to-green-50/50">
             {heroImages.map((image, index) => (
               <img
                 key={image.src}
                 src={image.src}
                 alt={image.alt}
-                width={800}
-                height={600}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                width={600}
+                height={800}
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${
                   index === currentImage ? "opacity-100" : "opacity-0"
                 }`}
                 {...(index === 0 ? { fetchPriority: "high" } : { loading: "lazy" })}
