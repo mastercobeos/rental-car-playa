@@ -7,21 +7,21 @@ import { cn } from "@/lib/utils"
 import { useLanguage } from "@/lib/language-context"
 
 const vehicles = [
-  // SEDANES — landscape catalog images (528x352): use "top" to show title text
-  // Almost-square images (512x462): use "center"
-  // Cropped strips (440x140/221): use "center"
-  // Portrait WhatsApp photos (1024x1536): use "center 40%" to show car
+  // SEDANES
   {
     id: 1,
     name: "Chevrolet Aveo Sedan",
     category: "sedan",
     transmission: "Automático / Manual",
     passengers: 5,
-    imgPos: "center 40%",
-    images: [
-      "/WhatsApp Image 2026-03-21 at 16.04.55.jpeg",
-      "/WhatsApp Image 2026-03-21 at 16.17.33.jpeg",
-    ],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Compact sedan, perfect for city driving and short trips around Playa del Carmen. Easy to park and very reliable.",
+      es: "Sedán compacto, perfecto para manejar en la ciudad y viajes cortos por Playa del Carmen. Fácil de estacionar y muy confiable.",
+    },
+    images: ["/fleet/aveo-sedan-cropped.jpg"],
+    price: 45,
   },
   {
     id: 2,
@@ -29,20 +29,14 @@ const vehicles = [
     category: "sedan",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: [
-      "/WhatsApp Image 2026-03-21 at 16.08.12 (1).jpeg",
-      "/WhatsApp Image 2026-03-21 at 16.17.32.jpeg",
-    ],
-  },
-  {
-    id: 3,
-    name: "Kia Forte Sedan",
-    category: "sedan",
-    transmission: "Automático",
-    passengers: 5,
-    imgPos: "top",
-    images: ["/sedan_automatico.jpg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Modern sedan with sleek design and smooth automatic transmission. Comfortable interior with excellent air conditioning for the tropical heat.",
+      es: "Sedán moderno con diseño elegante y transmisión automática suave. Interior cómodo con excelente aire acondicionado para el calor tropical.",
+    },
+    images: ["/fleet/kia-k3-clean.jpg"],
+    price: 55,
   },
   {
     id: 4,
@@ -50,8 +44,14 @@ const vehicles = [
     category: "sedan",
     transmission: "Automático / Manual",
     passengers: 5,
-    imgPos: "center",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.14 (2).jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Reliable and versatile sedan available in automatic or manual. Comfortable for exploring the Riviera Maya coastline.",
+      es: "Sedán confiable y versátil disponible en automático o manual. Cómodo para explorar la costa de la Riviera Maya.",
+    },
+    images: ["/fleet/kia-rio-clean3.jpg"],
+    price: 50,
   },
   {
     id: 5,
@@ -59,8 +59,14 @@ const vehicles = [
     category: "sedan",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "top",
-    images: ["/nissan_versa.jpg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Spacious sedan with one of the largest trunks in its class. Ideal for families with luggage arriving from the airport.",
+      es: "Sedán espacioso con una de las cajuelas más grandes de su clase. Ideal para familias con equipaje que llegan del aeropuerto.",
+    },
+    images: ["/fleet/nissan-versa-new.png"],
+    price: 50,
   },
   {
     id: 6,
@@ -68,18 +74,29 @@ const vehicles = [
     category: "sedan",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 60%",
-    showLabel: true,
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.12 (2).jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Premium mid-size sedan with refined ride quality. Comfortable for long drives to Tulum, Merida, or Chichen Itza.",
+      es: "Sedán premium de tamaño medio con manejo refinado. Cómodo para viajes largos a Tulum, Mérida o Chichén Itzá.",
+    },
+    images: ["/fleet/nissan-sentra-clean.jpg"],
+    price: 55,
   },
   {
     id: 7,
-    name: "Volkswagen Jetta",
+    name: "Volkswagen Virtus",
     category: "sedan",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 18.43.17.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "German-engineered sedan with solid build quality and smooth handling. Enjoy a comfortable, European-style driving experience.",
+      es: "Sedán de ingeniería alemana con excelente calidad de construcción y manejo suave. Disfruta una experiencia de conducción estilo europeo.",
+    },
+    images: ["/fleet/volkswagen-virtus-clean.jpg"],
+    price: 55,
   },
   // COMPACTOS
   {
@@ -88,17 +105,29 @@ const vehicles = [
     category: "compacto",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.14 (1).jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Agile hatchback perfect for navigating Playa del Carmen streets. Compact size with surprising interior space and easy parking.",
+      es: "Hatchback ágil perfecto para las calles de Playa del Carmen. Tamaño compacto con sorprendente espacio interior y fácil estacionamiento.",
+    },
+    images: ["/fleet/chevrolet-aveo-hatchback-new2.jpg"],
+    price: 40,
   },
   {
     id: 9,
-    name: "Kia Forte Hatchback",
-    category: "compacto",
+    name: "Kia Forte",
+    category: "sedan",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.14.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Sporty sedan with modern features and responsive handling. A fun drive with plenty of cargo space for beach gear.",
+      es: "Sedán deportivo con características modernas y manejo responsivo. Divertido de manejar con amplio espacio para equipo de playa.",
+    },
+    images: ["/fleet/kia-forte-clean.jpg"],
+    price: 55,
   },
   // SUVs & VANS
   {
@@ -107,8 +136,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 7,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.12 (3).jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Full-size 7-seat SUV with powerful performance. Perfect for large families or groups exploring cenotes, ruins, and beaches.",
+      es: "SUV de 7 asientos con rendimiento potente. Perfecto para familias grandes o grupos explorando cenotes, ruinas y playas.",
+    },
+    images: ["/fleet/kia-sorento-clean.jpg"],
+    price: 85,
   },
   {
     id: 11,
@@ -116,8 +151,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 7,
-    imgPos: "center",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.12.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Versatile 7-seat MPV combining comfort and space. Great for family road trips through the Yucatan Peninsula.",
+      es: "MPV versátil de 7 asientos que combina comodidad y espacio. Ideal para viajes familiares por la Península de Yucatán.",
+    },
+    images: ["/fleet/suzuki-ertiga-clean.jpg"],
+    price: 65,
   },
   {
     id: 12,
@@ -125,8 +166,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 7,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.08.12 (4).jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Toyota reliability in a spacious 7-seat package. Room for the whole family plus luggage — ideal for airport pickups.",
+      es: "Confiabilidad Toyota en un paquete espacioso de 7 asientos. Espacio para toda la familia y equipaje — ideal para recogidas en aeropuerto.",
+    },
+    images: ["/fleet/avanza-clean3.jpg"],
+    price: 65,
   },
   {
     id: 13,
@@ -134,8 +181,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "top",
-    images: ["/toyota_raize.jpg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Compact SUV with elevated driving position and modern tech. Great visibility and easy handling for exploring the Riviera Maya.",
+      es: "SUV compacto con posición de manejo elevada y tecnología moderna. Gran visibilidad y fácil manejo para explorar la Riviera Maya.",
+    },
+    images: ["/fleet/toyota-raize-clean3.jpg"],
+    price: 70,
   },
   {
     id: 14,
@@ -143,8 +196,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 7,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 15.44.45.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Rugged crossover with 7 seats and high ground clearance. Ready for any road — from highways to beach towns.",
+      es: "Crossover robusto con 7 asientos y altura al suelo elevada. Listo para cualquier camino — de carreteras a pueblos de playa.",
+    },
+    images: ["/fleet/mitsubishi-xpander-clean.jpg"],
+    price: 75,
   },
   {
     id: 15,
@@ -152,8 +211,14 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 15.46.52.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Popular mid-size SUV known worldwide for reliability. Powerful, comfortable, and perfect for adventurous day trips.",
+      es: "SUV mediano popular y reconocido mundialmente por su confiabilidad. Potente, cómodo y perfecto para aventuras de día.",
+    },
+    images: ["/fleet/toyota-rav4-clean.jpg"],
+    price: 85,
   },
   {
     id: 16,
@@ -161,27 +226,65 @@ const vehicles = [
     category: "suv",
     transmission: "Automático",
     passengers: 5,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 15.50.06.jpeg"],
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Modern hybrid SUV with cutting-edge technology and smooth electric driving. Eco-friendly luxury for your vacation.",
+      es: "SUV híbrido moderno con tecnología de punta y manejo eléctrico suave. Lujo ecológico para tus vacaciones.",
+    },
+    images: ["/fleet/byd-song-plus-new.png"],
+    price: 90,
   },
   // MOTOS
   {
     id: 17,
     name: "Honda Scoopy 110",
-    category: "moto",
+    category: "scooter",
     transmission: "Automático",
     passengers: 2,
-    imgPos: "center 40%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.04.26.jpeg"],
+    doors: 0,
+    ac: false,
+    helmets: 2,
+    insuranceIncluded: true,
+    description: {
+      en: "Easy-to-ride automatic scooter — perfect for getting around Playa del Carmen. 2 helmets and insurance included.",
+      es: "Scooter automático fácil de manejar — perfecto para moverte por Playa del Carmen. 2 cascos y seguro incluidos.",
+    },
+    images: ["/fleet/scoopy-1.png"],
+    price: 25,
   },
   {
     id: 18,
-    name: "Moto Negra 110",
-    category: "moto",
+    name: "Italika Vitalia 150",
+    category: "scooter",
     transmission: "Automático",
     passengers: 2,
-    imgPos: "center 60%",
-    images: ["/WhatsApp Image 2026-03-21 at 16.04.26 (1).jpeg"],
+    doors: 0,
+    ac: false,
+    helmets: 2,
+    insuranceIncluded: true,
+    description: {
+      en: "150cc motorcycle perfect for exploring Playa del Carmen and surrounding areas. Comfortable ride with 2 helmets and insurance included.",
+      es: "Motocicleta de 150cc perfecta para explorar Playa del Carmen y alrededores. Manejo cómodo con 2 cascos y seguro incluidos.",
+    },
+    images: ["/fleet/italika-black.jpg"],
+    price: 20,
+  },
+  // TRANSFER
+  {
+    id: 19,
+    name: "Sprinter / Van 12 Pasajeros",
+    category: "transfer",
+    transmission: "Manual",
+    passengers: 12,
+    doors: 4,
+    ac: true,
+    description: {
+      en: "Spacious 12-passenger van perfect for group transfers from Cancun Airport to your hotel. Ideal for large families or groups.",
+      es: "Van espaciosa de 12 pasajeros perfecta para transfer grupal del Aeropuerto de Cancún a tu hotel. Ideal para familias grandes o grupos.",
+    },
+    images: ["/fleet/sprinter-white-clean.jpg"],
+    price: 150,
   },
 ]
 
@@ -196,7 +299,8 @@ export function FleetSection() {
     { id: "sedan", label: t("Sedans", "Sedanes") },
     { id: "compacto", label: t("Compact", "Compactos") },
     { id: "suv", label: t("SUVs & Vans", "SUVs & Vans") },
-    { id: "moto", label: t("Motorcycles", "Motos") },
+    { id: "scooter", label: "Scooters" },
+    { id: "transfer", label: "Transfer" },
   ]
 
   const filteredVehicles = activeCategory === "all"
@@ -271,60 +375,115 @@ export function FleetSection() {
               className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-[3/2]">
+              <div className="relative overflow-hidden aspect-[4/3] bg-white">
                 <img
                   src={vehicle.images[0]}
                   alt={`${vehicle.name} for rent in Playa del Carmen - ${vehicle.transmission} ${vehicle.passengers} passengers`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  style={{ objectPosition: vehicle.imgPos }}
+                  className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width={600}
                   height={400}
                 />
-                {/* Text overlay for images without built-in text */}
-                {(vehicle as any).showLabel && (
-                  <div className="absolute inset-0 flex flex-col justify-start items-start p-5 pt-4">
-                    <div className="bg-black/30 backdrop-blur-[2px] rounded-xl px-4 py-2">
-                      <h4 className="text-white font-bold text-xl drop-shadow-lg">{vehicle.name}</h4>
-                      <p className="text-white/90 text-xs drop-shadow-md">
-                        {vehicle.transmission} · {vehicle.passengers} {t("passengers", "pasajeros")}
-                      </p>
-                    </div>
-                  </div>
-                )}
+                {/* Category badge */}
+                <div className="absolute top-3 left-3 bg-primary/90 text-white text-xs font-semibold px-3 py-1 rounded-full capitalize">
+                  {vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}
+                </div>
                 {/* Photo count badge */}
                 {vehicle.images.length > 1 && (
                   <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1 rounded-full">
                     +{vehicle.images.length - 1} {t("photos", "fotos")}
                   </div>
                 )}
+                {/* Overlay bar with name and key specs */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-3 px-4">
+                  <h3 className="text-white font-bold text-lg">{vehicle.name}</h3>
+                  <p className="text-white/80 text-xs">
+                    {vehicle.transmission.includes("Manual") ? t("Automatic / Manual", "Automático / Manual") : t("Automatic", "Automático")}
+                    {" · "}
+                    {vehicle.passengers} {t("passengers", "pasajeros")}
+                  </p>
+                </div>
               </div>
 
               {/* Info */}
               <div className="p-5">
                 <h3 className="text-lg font-bold text-foreground mb-2">{vehicle.name}</h3>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                  <span>{vehicle.transmission}</span>
-                  <span>•</span>
-                  <span>{vehicle.passengers} {t("passengers", "pasajeros")}</span>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {t(vehicle.description.en, vehicle.description.es)}
+                </p>
+                <div className="border-t border-border pt-3 mb-4">
+                  <div className="grid grid-cols-2 gap-2.5 text-sm text-muted-foreground">
+                    {/* 1. Category */}
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 7h10v10H7z" /><path strokeLinecap="round" strokeLinejoin="round" d="M3 3h4v4H3zM17 3h4v4h-4zM3 17h4v4H3zM17 17h4v4h-4z" /></svg>
+                      <span>{vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}</span>
+                    </div>
+                    {/* 2. Seats */}
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                      <span>{vehicle.passengers} {t("Seats", "Plazas")}</span>
+                    </div>
+                    {/* 3. Doors */}
+                    {vehicle.doors > 0 && (
+                      <div className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18" /></svg>
+                        <span>{vehicle.doors} {t("Doors", "Puertas")}</span>
+                      </div>
+                    )}
+                    {/* 4. Transmission */}
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                      <span>{vehicle.transmission.includes("Manual") ? t("Auto / Manual", "Auto / Manual") : t("Automatic", "Automático")}</span>
+                    </div>
+                    {/* 5. A/C or Helmets */}
+                    {vehicle.ac && (
+                      <div className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" /></svg>
+                        <span>{t("A/C", "A/C")}</span>
+                      </div>
+                    )}
+                    {(vehicle as any).helmets && (
+                      <div className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span>{t("2 Helmets", "2 Cascos")}</span>
+                      </div>
+                    )}
+                    {(vehicle as any).insuranceIncluded && (
+                      <div className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>{t("Insurance", "Seguro")}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <Button
-                  size="sm"
-                  className="w-full bg-[#25D366] hover:bg-[#1da851] text-white gap-2 rounded-xl"
-                  asChild
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <a
-                    href={`https://wa.me/529902031942?text=${encodeURIComponent(t(`Hi, I'm interested in renting the ${vehicle.name}`, `Hola, me interesa rentar el ${vehicle.name}`))}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    {t("Reserve via WhatsApp", "Reservar por WhatsApp")}
-                  </a>
-                </Button>
+                {/* Included benefits */}
+                {vehicle.category !== "scooter" && (
+                  <div className="border-t border-border pt-3 mb-4">
+                    <div className="grid grid-cols-1 gap-1.5 text-sm">
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span className="text-muted-foreground">{t("Insurance with 10% deductible", "Seguro con 10% de deducible")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span className="text-muted-foreground">{t("Third-party damage coverage", "Cobertura de daños a terceros")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span className="text-muted-foreground">{t("2 authorized drivers", "2 conductores autorizados")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span className="text-muted-foreground">{t("Complimentary baby seat", "Silla de bebé de cortesía")}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="bg-primary/10 rounded-xl py-3 px-4 text-center">
+                  <span className="text-sm text-muted-foreground">{t("Starting at", "Desde")}</span>
+                  <div className="text-2xl font-bold text-primary">${(vehicle as any).price} USD <span className="text-sm font-normal text-muted-foreground">/ {t("day", "día")}</span></div>
+                </div>
               </div>
             </div>
           ))}

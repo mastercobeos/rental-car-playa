@@ -27,15 +27,15 @@ export function FAQSection() {
     {
       question: t("How does airport pickup work?", "¿Cómo funciona la recogida en el aeropuerto?"),
       answer: t(
-        "Our team will meet you at Cancun International Airport (CUN) in the arrivals area. We'll have a sign with your name. We provide complimentary pickup and dropoff at the airport for all rentals. Just share your flight details when booking.",
-        "Nuestro equipo te recibirá en el Aeropuerto Internacional de Cancún (CUN) en el área de llegadas. Tendremos un letrero con tu nombre. Ofrecemos recogida y entrega gratuita en el aeropuerto para todas las rentas. Solo comparte los detalles de tu vuelo al reservar."
+        "Our team will meet you at Cancun International Airport (CUN) in the arrivals area with a sign with your name. Airport pickup/delivery has a fee of $50 USD. Delivery to Tulum is $75 USD. Hotel delivery in Playa del Carmen is free. Just share your flight details when booking.",
+        "Nuestro equipo te recibirá en el Aeropuerto Internacional de Cancún (CUN) en el área de llegadas con un letrero con tu nombre. La recogida/entrega en aeropuerto tiene un costo de $50 USD. La entrega en Tulum es de $75 USD. La entrega en hotel en Playa del Carmen es gratis. Solo comparte los detalles de tu vuelo al reservar."
       ),
     },
     {
       question: t("Can I drive the rental car to other Mexican states?", "¿Puedo llevar el auto rentado a otros estados de México?"),
       answer: t(
-        "Absolutely! Our vehicles are licensed for travel throughout Mexico. Many customers drive to Merida, Valladolid, and other destinations in the Yucatan Peninsula. We just ask that you let us know your planned route.",
-        "¡Por supuesto! Nuestros vehículos están autorizados para viajar por todo México. Muchos clientes manejan a Mérida, Valladolid y otros destinos en la Península de Yucatán. Solo te pedimos que nos informes tu ruta planeada."
+        "Our vehicles are authorized for travel within the Riviera Maya and Yucatan Peninsula region. Many customers drive to Merida, Valladolid, Tulum, and other destinations in the area. We just ask that you let us know your planned route.",
+        "Nuestros vehículos están autorizados para viajar dentro de la Riviera Maya y la Península de Yucatán. Muchos clientes manejan a Mérida, Valladolid, Tulum y otros destinos de la zona. Solo te pedimos que nos informes tu ruta planeada."
       ),
     },
     {

@@ -32,8 +32,8 @@ export function SEOSchemas() {
       }
     ],
     "priceRange": "$$",
-    "currenciesAccepted": "USD, MXN",
-    "paymentAccepted": "Cash, Credit Card, Debit Card",
+    "currenciesAccepted": "USD, MXN, EUR",
+    "paymentAccepted": "Cash, Debit Card, Credit Card",
     "areaServed": [
       {
         "@type": "City",
@@ -94,7 +94,7 @@ export function SEOSchemas() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Car",
-                "name": "Volkswagen Jetta",
+                "name": "Volkswagen Virtus",
                 "vehicleTransmission": "Automatic",
                 "seatingCapacity": 5
               }

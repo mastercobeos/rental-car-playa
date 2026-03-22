@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Clock, DollarSign, Car, MapPin, Plane } from "lucide-react"
+import { Shield, Clock, DollarSign, Car, MapPin, Plane, Users, Baby } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function FeaturesSection() {
@@ -8,51 +8,51 @@ export function FeaturesSection() {
 
   const features = [
     {
-      icon: DollarSign,
-      title: t("No Hidden Fees", "Sin Cargos"),
-      description: t(
-        "We don't charge hidden fees. The price you see is the price you pay. Transparent and honest.",
-        "No cobramos tarifas ocultas. El precio que ves es el precio que pagas. Transparente y honesto."
-      ),
-    },
-    {
-      icon: Clock,
-      title: t("Service 8 AM to 7 PM", "Atención 8 AM a 7 PM"),
-      description: t(
-        "Direct delivery to your hotel. We bring the car to you so you can start your adventure right away.",
-        "Entrega directa en tu hotel. Te llevamos el auto para que comiences tu aventura de inmediato."
-      ),
-    },
-    {
       icon: Shield,
-      title: t("Variety & Insurance", "Variedad"),
+      title: t("Insurance Included", "Seguro Incluido"),
       description: t(
-        "Insurance included with every rental. Choose from cars, SUVs, and motorcycles.",
-        "Seguro incluido en cada renta. Elige entre autos, SUVs y motos."
+        "Full insurance included with 10% deductible. Third-party liability coverage on every rental.",
+        "Seguro incluido con 10% de deducible. Cobertura de daños a terceros en cada renta."
       ),
     },
     {
-      icon: MapPin,
-      title: t("Playa del Carmen", "Playa del Carmen"),
+      icon: Users,
+      title: t("2 Drivers Included", "2 Conductores Incluidos"),
       description: t(
-        "Located in the heart of Playa del Carmen, near the airport and the most beautiful beaches.",
-        "Ubicados en el corazón de Playa del Carmen, cerca del aeropuerto y las playas más bonitas."
+        "Add a second driver at no extra charge. Perfect for couples and families on road trips.",
+        "Agrega un segundo conductor sin cobro adicional. Perfecto para parejas y familias en viajes."
+      ),
+    },
+    {
+      icon: Baby,
+      title: t("Free Baby Seat", "Silla de Bebé Gratis"),
+      description: t(
+        "Complimentary baby car seat with every rental. Travel safely with your little ones.",
+        "Silla de bebé de cortesía con cada renta. Viaja seguro con tus pequeños."
+      ),
+    },
+    {
+      icon: DollarSign,
+      title: t("Cash & Card Payments", "Pago Efectivo y Tarjeta"),
+      description: t(
+        "Pay with cash (USD, MXN, EUR) or debit/credit card. Flexible payment options for your convenience.",
+        "Paga con efectivo (USD, MXN, EUR) o tarjeta de débito/crédito. Opciones de pago flexibles."
       ),
     },
     {
       icon: Plane,
-      title: t("Cancun Airport", "Aeropuerto de Cancún"),
+      title: t("Cancun Airport Delivery", "Entrega en Aeropuerto"),
       description: t(
-        "Free pickup and drop-off at Cancun International Airport. We meet you at arrivals.",
-        "Recogida y entrega gratuita en el Aeropuerto Internacional de Cancún. Te recibimos en llegadas."
+        "Pickup and delivery at Cancun International Airport (CUN) for $50 USD. We meet you at arrivals.",
+        "Recogida y entrega en el Aeropuerto Internacional de Cancún (CUN) por $50 USD. Te recibimos en llegadas."
       ),
     },
     {
-      icon: Car,
-      title: t("Quality Fleet", "Flota de Calidad"),
+      icon: Clock,
+      title: t("Service 8 AM to 8 PM", "Atención 8 AM a 8 PM"),
       description: t(
-        "Well-maintained, recent model vehicles. Manual and automatic cars, SUVs, and motorcycles.",
-        "Vehículos bien mantenidos, modelos recientes. Autos manuales y automáticos, SUVs y motos."
+        "Available every day from 8 AM to 8 PM. Hotel delivery in Playa del Carmen included at no extra cost.",
+        "Disponibles todos los días de 8 AM a 8 PM. Entrega en hotel en Playa del Carmen sin costo adicional."
       ),
     },
   ]

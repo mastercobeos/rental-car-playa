@@ -21,22 +21,22 @@ export function ContactFAQSection() {
     {
       question: t("Is insurance included in the rental price?", "¿El seguro está incluido en el precio de renta?"),
       answer: t(
-        "Yes! All our rentals include comprehensive insurance coverage including liability, collision damage waiver (CDW), and theft protection. There are no hidden fees - the price you see includes full coverage.",
-        "¡Sí! Todas nuestras rentas incluyen cobertura de seguro integral incluyendo responsabilidad civil, exención de daños por colisión (CDW) y protección contra robo. No hay cargos ocultos - el precio que ves incluye cobertura total."
+        "Yes! All our rentals include insurance with a 10% deductible, plus third-party liability coverage. You also get 2 drivers included at no extra charge and a complimentary baby car seat.",
+        "¡Sí! Todas nuestras rentas incluyen seguro con 10% de deducible, más cobertura de daños a terceros. También incluye 2 conductores sin cobro adicional y silla de bebé de cortesía."
       ),
     },
     {
       question: t("How does airport pickup work?", "¿Cómo funciona la recogida en el aeropuerto?"),
       answer: t(
-        "Our team will meet you at Cancun International Airport (CUN) in the arrivals area. We'll have a sign with your name. We provide complimentary pickup and dropoff at the airport for all rentals. Just share your flight details when booking.",
-        "Nuestro equipo te recibirá en el Aeropuerto Internacional de Cancún (CUN) en el área de llegadas. Tendremos un letrero con tu nombre. Ofrecemos recogida y entrega gratuita en el aeropuerto para todas las rentas. Solo comparte los detalles de tu vuelo al reservar."
+        "Our team will meet you at Cancun International Airport (CUN) in the arrivals area with a sign with your name. Airport pickup/delivery has a fee of $50 USD. Delivery to Tulum is $75 USD. Hotel delivery in Playa del Carmen is free. Just share your flight details when booking.",
+        "Nuestro equipo te recibirá en el Aeropuerto Internacional de Cancún (CUN) en el área de llegadas con un letrero con tu nombre. La recogida/entrega en aeropuerto tiene un costo de $50 USD. La entrega en Tulum es de $75 USD. La entrega en hotel en Playa del Carmen es gratis. Solo comparte los detalles de tu vuelo al reservar."
       ),
     },
     {
       question: t("Can I drive the rental car to other Mexican states?", "¿Puedo llevar el auto rentado a otros estados de México?"),
       answer: t(
-        "Absolutely! Our vehicles are licensed for travel throughout Mexico. Many customers drive to Merida, Valladolid, and other destinations in the Yucatan Peninsula. We just ask that you let us know your planned route.",
-        "¡Por supuesto! Nuestros vehículos están autorizados para viajar por todo México. Muchos clientes manejan a Mérida, Valladolid y otros destinos en la Península de Yucatán. Solo te pedimos que nos informes tu ruta planeada."
+        "Our vehicles are authorized for travel within the Riviera Maya and Yucatan Peninsula region. Many customers drive to Merida, Valladolid, Tulum, and other destinations in the area. We just ask that you let us know your planned route.",
+        "Nuestros vehículos están autorizados para viajar dentro de la Riviera Maya y la Península de Yucatán. Muchos clientes manejan a Mérida, Valladolid, Tulum y otros destinos de la zona. Solo te pedimos que nos informes tu ruta planeada."
       ),
     },
     {
@@ -137,6 +137,21 @@ export function ContactFAQSection() {
                 <h3 className="font-bold text-foreground text-sm">{t("Hours", "Horario")}</h3>
                 <p className="text-muted-foreground text-sm">{t("Monday - Sunday", "Lunes - Domingo")}</p>
                 <p className="text-xs text-muted-foreground">8:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+
+            {/* Payment Methods */}
+            <div className="p-5 rounded-2xl bg-card border border-border">
+              <h3 className="font-bold text-foreground text-sm mb-3">{t("Payment Methods", "Métodos de Pago")}</h3>
+              <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <span className="text-base">💵</span>
+                  <span>{t("Cash: USD, MXN & EUR", "Efectivo: USD, MXN y EUR")}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-base">💳</span>
+                  <span>{t("Debit & Credit Card", "Tarjeta de Débito y Crédito")}</span>
+                </div>
               </div>
             </div>
 
