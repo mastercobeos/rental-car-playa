@@ -142,7 +142,7 @@ const vehicles = [
       en: "Full-size 7-seat SUV with powerful performance. Perfect for large families or groups exploring cenotes, ruins, and beaches.",
       es: "SUV de 7 asientos con rendimiento potente. Perfecto para familias grandes o grupos explorando cenotes, ruinas y playas.",
     },
-    images: ["/fleet/kia-sorento-clean.jpg"],
+    images: ["/fleet/kia-sorento-new.webp"],
     price: 85,
   },
   {
@@ -157,7 +157,7 @@ const vehicles = [
       en: "Versatile 7-seat MPV combining comfort and space. Great for family road trips through the Yucatan Peninsula.",
       es: "MPV versátil de 7 asientos que combina comodidad y espacio. Ideal para viajes familiares por la Península de Yucatán.",
     },
-    images: ["/fleet/suzuki-ertiga-new.jpg"],
+    images: ["/fleet/suzuki-ertiga-new.png"],
     price: 65,
   },
   {
