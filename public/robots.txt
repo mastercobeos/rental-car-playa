@@ -1,0 +1,9 @@
+# Playa Car Rental - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.carrentalplaya.com/sitemap.xml
+
+# Disallow utility pages
+Disallow: /language-buttons
