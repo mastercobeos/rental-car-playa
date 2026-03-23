@@ -66,7 +66,7 @@ const vehicles = [
       en: "Reliable and versatile sedan available in automatic or manual. Comfortable for exploring the Riviera Maya coastline.",
       es: "Sedán confiable y versátil disponible en automático o manual. Cómodo para explorar la costa de la Riviera Maya.",
     },
-    images: ["/fleet/kia-rio-clean3.jpg"],
+    images: ["/fleet/kia-rio-clean4.jpg"],
     price: 75,
   },
   {
