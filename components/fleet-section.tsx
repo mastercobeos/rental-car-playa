@@ -241,7 +241,7 @@ const vehicles = [
   {
     id: 20,
     name: "Nissan Urvan",
-    category: "suv",
+    category: "van",
     transmission: "Manual",
     passengers: 12,
     doors: 4,
@@ -300,7 +300,8 @@ export function FleetSection() {
     { id: "all", label: t("All", "Todos") },
     { id: "compacto", label: t("Compact", "Compactos") },
     { id: "sedan", label: t("Sedans", "Sedanes") },
-    { id: "suv", label: t("SUVs & Vans", "SUVs & Vans") },
+    { id: "suv", label: "SUVs" },
+    { id: "van", label: "Vans" },
     { id: "scooter", label: "Scooters" },
     { id: "transfer", label: "Transfer" },
   ]
@@ -388,7 +389,7 @@ export function FleetSection() {
                 />
                 {/* Category badge */}
                 <div className="absolute top-3 left-3 bg-primary/90 text-white text-xs font-semibold px-3 py-1 rounded-full capitalize">
-                  {vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}
+                  {vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "van" ? "Van" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}
                 </div>
                 {/* Photo count badge */}
                 {vehicle.images.length > 1 && (
@@ -423,7 +424,7 @@ export function FleetSection() {
                     {/* 1. Category */}
                     <div className="flex items-center gap-1.5">
                       <svg className="w-4 h-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 7h10v10H7z" /><path strokeLinecap="round" strokeLinejoin="round" d="M3 3h4v4H3zM17 3h4v4h-4zM3 17h4v4H3zM17 17h4v4h-4z" /></svg>
-                      <span>{vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}</span>
+                      <span>{vehicle.category === "compacto" ? t("Compact", "Compacto") : vehicle.category === "suv" ? "SUV" : vehicle.category === "van" ? "Van" : vehicle.category === "scooter" ? "Scooter" : vehicle.category === "transfer" ? "Transfer" : t("Sedan", "Sedán")}</span>
                     </div>
                     {/* 2. Seats */}
                     <div className="flex items-center gap-1.5">
@@ -502,16 +503,25 @@ export function FleetSection() {
       {selectedVehicle && (
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4" onClick={closeGallery}>
           <div className="relative max-w-3xl w-full max-h-[95vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            {/* Close button */}
-            <button
-              onClick={closeGallery}
-              className="absolute top-0 right-0 sm:-top-12 sm:right-0 z-10 text-white/70 hover:text-white transition-colors bg-black/50 sm:bg-transparent rounded-full p-2"
-            >
-              <X className="h-6 w-6 sm:h-8 sm:w-8" />
-            </button>
+            {/* Top bar: Back button + Close button */}
+            <div className="flex items-center justify-between mb-4">
+              <button
+                onClick={closeGallery}
+                className="flex items-center gap-1.5 text-white/70 hover:text-white transition-colors text-sm"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                {t("Back to fleet", "Regresar a flota")}
+              </button>
+              <button
+                onClick={closeGallery}
+                className="text-white/70 hover:text-white transition-colors p-1"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
 
             {/* Vehicle name */}
-            <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4 pr-10 sm:pr-0">{selectedVehicle.name}</h3>
+            <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{selectedVehicle.name}</h3>
 
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden bg-black">
@@ -545,6 +555,9 @@ export function FleetSection() {
                 {galleryIndex + 1} / {selectedVehicle.images.length}
               </div>
             </div>
+
+            {/* Disclaimer */}
+            <p className="text-white/40 text-xs mt-2 text-center">{t("* Photos are for illustration purposes only. Actual vehicle may vary.", "* Las fotos son ilustrativas. El vehículo puede variar.")}</p>
 
             {/* Thumbnails */}
             {selectedVehicle.images.length > 1 && (
