@@ -169,8 +169,8 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/60 text-sm">
               {t(
-                "© 2026 Playa Car Rental. All rights reserved.",
-                "© 2026 Playa Car Rental. Todos los derechos reservados."
+                "© Playa Car Rental. All rights reserved.",
+                "© Playa Car Rental. Todos los derechos reservados."
               )}
             </p>
             <div className="flex flex-wrap items-center gap-6 text-sm">
