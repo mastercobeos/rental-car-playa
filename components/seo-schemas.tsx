@@ -2,7 +2,7 @@ export function SEOSchemas() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AutoRental",
-    "name": "Playa Car Rental",
+    "name": "Car Rental Playa",
     "image": "https://www.carrentalplaya.com/og-image.jpg",
     "url": "https://www.carrentalplaya.com",
     "telephone": "+529902031942",
@@ -132,7 +132,7 @@ export function SEOSchemas() {
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "AutoRental",
-    "name": "Playa Car Rental",
+    "name": "Car Rental Playa",
     "review": [
       {
         "@type": "Review",
@@ -232,7 +232,7 @@ export function SEOSchemas() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Playa Car Rental",
+    "name": "Car Rental Playa",
     "url": "https://www.carrentalplaya.com",
     "description": "Premium car rental service in Playa del Carmen, Mexico. Serving American tourists with free Cancun airport pickup, full insurance, and 24/7 English support.",
     "inLanguage": ["en-US", "es-MX"]

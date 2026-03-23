@@ -50,7 +50,7 @@ export function Header() {
           <Link href="/" className="flex items-center">
             <img
               src="/logo. png.png"
-              alt="Playa Car Rental - Rent a car in Playa del Carmen"
+              alt="Car Rental Playa - Rent a car in Playa del Carmen"
               className="h-12 md:h-16 lg:h-24 w-auto"
             />
           </Link>

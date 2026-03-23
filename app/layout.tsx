@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: 'Car Rental Playa del Carmen | Rent a Car Riviera Maya - Free Airport Pickup',
-    template: '%s | Playa Car Rental',
+    template: '%s | Car Rental Playa',
   },
   description: 'Rent a car in Playa del Carmen, Mexico. Free Cancun airport pickup, insurance included, no hidden fees. SUVs, sedans & scooters. Trusted by 500+ American tourists. Book via WhatsApp now!',
   keywords: [
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     'best car rental playa del carmen',
     'automatic car rental mexico',
   ],
-  authors: [{ name: 'Playa Car Rental' }],
-  creator: 'Playa Car Rental',
-  publisher: 'Playa Car Rental',
+  authors: [{ name: 'Car Rental Playa' }],
+  creator: 'Car Rental Playa',
+  publisher: 'Car Rental Playa',
   formatDetection: {
     email: false,
     address: false,
@@ -63,14 +63,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'es_MX',
-    siteName: 'Playa Car Rental',
+    siteName: 'Car Rental Playa',
     url: siteUrl,
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Playa Car Rental - Premium car rentals in Playa del Carmen, Mexico with free Cancun airport pickup',
+        alt: 'Car Rental Playa - Premium car rentals in Playa del Carmen, Mexico with free Cancun airport pickup',
         type: 'image/jpeg',
       },
     ],

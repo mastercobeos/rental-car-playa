@@ -20,7 +20,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30 relative overflow-hidden" aria-label="Contact Playa Car Rental">
+    <section id="contact" className="py-24 bg-secondary/30 relative overflow-hidden" aria-label="Contact Car Rental Playa">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}

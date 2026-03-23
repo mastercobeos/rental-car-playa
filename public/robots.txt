@@ -1,4 +1,4 @@
-# Playa Car Rental - robots.txt
+# Car Rental Playa - robots.txt
 User-agent: *
 Allow: /
 

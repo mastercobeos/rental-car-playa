@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Terms of Service & Rental Agreement',
-  description: 'Terms of Service and Rental Agreement for Playa Car Rental. Understand your rental conditions, insurance coverage, cancellation policy, and driver requirements for renting a car in Playa del Carmen.',
+  description: 'Terms of Service and Rental Agreement for Car Rental Playa. Understand your rental conditions, insurance coverage, cancellation policy, and driver requirements for renting a car in Playa del Carmen.',
   alternates: {
     canonical: 'https://www.carrentalplaya.com/terms-of-service',
   },
@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
 
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">1. Rental Requirements</h2>
-            <p>To rent a vehicle from Playa Car Rental, you must meet the following requirements:</p>
+            <p>To rent a vehicle from Car Rental Playa, you must meet the following requirements:</p>
             <ul className="list-disc pl-6 space-y-2 mt-3">
               <li>Be at least 21 years of age (25 for premium vehicles)</li>
               <li>Hold a valid driver&apos;s license from your home country (US and Canadian licenses are accepted without an International Driving Permit)</li>
@@ -105,7 +105,7 @@ export default function TermsOfServicePage() {
 
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">9. Liability</h2>
-            <p>Playa Car Rental is not liable for personal belongings left in the vehicle, traffic violations incurred by the renter, or delays caused by circumstances beyond our control (weather, road closures, etc.).</p>
+            <p>Car Rental Playa is not liable for personal belongings left in the vehicle, traffic violations incurred by the renter, or delays caused by circumstances beyond our control (weather, road closures, etc.).</p>
           </section>
 
           <section>

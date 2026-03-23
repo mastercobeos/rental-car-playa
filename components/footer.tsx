@@ -17,7 +17,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-6">
               <img
                 src="/logo. png.png"
-                alt="Playa Car Rental - Car rental service in Playa del Carmen Mexico"
+                alt="Car Rental Playa - Car rental service in Playa del Carmen Mexico"
                 className="h-12 w-auto brightness-0 invert"
               />
             </Link>
@@ -169,8 +169,8 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/60 text-sm">
               {t(
-                "© Playa Car Rental. All rights reserved.",
-                "© Playa Car Rental. Todos los derechos reservados."
+                "© Car Rental Playa. All rights reserved.",
+                "© Car Rental Playa. Todos los derechos reservados."
               )}
             </p>
             <div className="flex flex-wrap items-center gap-6 text-sm">

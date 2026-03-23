@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Privacy Policy for Playa Car Rental. Learn how we collect, use, and protect your personal information when you rent a car in Playa del Carmen, Mexico.',
+  description: 'Privacy Policy for Car Rental Playa. Learn how we collect, use, and protect your personal information when you rent a car in Playa del Carmen, Mexico.',
   alternates: {
     canonical: 'https://www.carrentalplaya.com/privacy-policy',
   },
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">1. Information We Collect</h2>
-            <p>When you rent a car from Playa Car Rental or use our website, we may collect the following personal information:</p>
+            <p>When you rent a car from Car Rental Playa or use our website, we may collect the following personal information:</p>
             <ul className="list-disc pl-6 space-y-2 mt-3">
               <li>Full name, email address, and phone number</li>
               <li>Driver&apos;s license information and passport details</li>
