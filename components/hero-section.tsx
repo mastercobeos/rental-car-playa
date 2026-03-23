@@ -321,7 +321,7 @@ export function HeroSection() {
             </div>
 
             {/* Row 2: Reservation details */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-end gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 items-end gap-2">
               <div className="col-span-2 md:col-span-1">
                 <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
                   {t("Pickup Location", "Lugar Recogida")}
@@ -477,7 +477,7 @@ export function HeroSection() {
               <Button
                 type="submit"
                 disabled={sending}
-                className="col-span-2 md:col-span-3 lg:col-span-1 w-full px-6 py-4 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-70"
+                className="col-span-2 md:col-span-3 lg:col-span-1 w-full px-6 py-2 text-sm font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-70"
               >
                 {sending ? t("Sending...", "Enviando...") : t("Reserve Now", "Reserva Ya")}
                 <ArrowRight className="h-4 w-4" />
