@@ -102,7 +102,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="booking" className="pt-20 md:pt-24 lg:pt-28 pb-4 bg-gradient-to-br from-background via-background to-primary/5 flex flex-col justify-center gap-4 md:gap-6 relative overflow-hidden min-h-screen lg:h-screen">
+    <section id="booking" className="pt-20 md:pt-24 lg:pt-28 pb-4 bg-gradient-to-br from-background via-background to-primary/5 flex flex-col justify-center gap-4 md:gap-6 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
