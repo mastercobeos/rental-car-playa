@@ -263,8 +263,8 @@ const vehicles = [
     doors: 4,
     ac: true,
     description: {
-      en: "Private transfer service from Cancun Airport to Playa del Carmen. Comfortable 12-passenger van with A/C for your group.",
-      es: "Servicio de transfer privado del Aeropuerto de Cancún a Playa del Carmen. Van cómoda de 12 pasajeros con A/C para tu grupo.",
+      en: "Private transfer service from Cancun Airport to Playa del Carmen. Comfortable 10-passenger van with A/C and luggage space.",
+      es: "Servicio de transfer privado del Aeropuerto de Cancún a Playa del Carmen. Van cómoda de 10 pasajeros con A/C y espacio para equipaje.",
     },
     images: ["/fleet/nissan-urvan-white-3q.jpg"],
     price: 95,
@@ -400,9 +400,14 @@ export function FleetSection() {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-3 px-4">
                   <h3 className="text-white font-bold text-lg">{vehicle.name}</h3>
                   <p className="text-white/80 text-xs">
-                    {vehicle.transmission.includes("Manual") ? t("Automatic / Manual", "Automático / Manual") : t("Automatic", "Automático")}
-                    {" · "}
-                    {vehicle.passengers} {t("passengers", "pasajeros")}
+                    {vehicle.category === "transfer"
+                      ? `${vehicle.passengers} ${t("passengers", "pasajeros")}`
+                      : <>
+                          {vehicle.transmission.includes("Manual") ? t("Automatic / Manual", "Automático / Manual") : t("Automatic", "Automático")}
+                          {" · "}
+                          {vehicle.passengers} {t("passengers", "pasajeros")}
+                        </>
+                    }
                   </p>
                 </div>
               </div>
@@ -413,7 +418,7 @@ export function FleetSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {t(vehicle.description.en, vehicle.description.es)}
                 </p>
-                <div className="border-t border-border pt-3 mb-4">
+                {vehicle.category !== "transfer" && <div className="border-t border-border pt-3 mb-4">
                   <div className="grid grid-cols-2 gap-2.5 text-sm text-muted-foreground">
                     {/* 1. Category */}
                     <div className="flex items-center gap-1.5">
@@ -457,9 +462,9 @@ export function FleetSection() {
                       </div>
                     )}
                   </div>
-                </div>
+                </div>}
                 {/* Included benefits */}
-                {vehicle.category !== "scooter" && (
+                {vehicle.category !== "scooter" && vehicle.category !== "transfer" && (
                   <div className="border-t border-border pt-3 mb-4">
                     <div className="grid grid-cols-1 gap-1.5 text-sm">
                       <div className="flex items-center gap-2">
