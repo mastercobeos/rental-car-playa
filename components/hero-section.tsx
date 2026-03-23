@@ -30,6 +30,7 @@ export function HeroSection() {
   const [pickupDate, setPickupDate] = useState("")
   const [returnDate, setReturnDate] = useState("")
   const [pickupTime, setPickupTime] = useState("8:00 AM")
+  const [returnTime, setReturnTime] = useState("8:00 AM")
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phoneCode, setPhoneCode] = useState("+1")
@@ -58,8 +59,8 @@ export function HeroSection() {
     const contactEmail = email || (language === "en" ? "Not provided" : "No proporcionado")
 
     const message = language === "en"
-      ? `Hello! I'd like to reserve a car 🚗\n\n👤 *Name:* ${name}\n📧 *Email:* ${contactEmail}\n📱 *Phone:* ${contactPhone}\n\n📍 *Pickup Location:* ${locationName}\n🚘 *Vehicle Type:* ${vehicleName}\n📅 *Pickup Date:* ${pickup}\n📅 *Return Date:* ${returnD}\n🕐 *Pickup Time:* ${pickupTime}\n\nCould you confirm availability? Thank you!`
-      : `¡Hola! Me gustaría reservar un auto 🚗\n\n👤 *Nombre:* ${name}\n📧 *Correo:* ${contactEmail}\n📱 *Teléfono:* ${contactPhone}\n\n📍 *Lugar de Recogida:* ${locationName}\n🚘 *Tipo de Vehículo:* ${vehicleName}\n📅 *Fecha de Recogida:* ${pickup}\n📅 *Fecha de Devolución:* ${returnD}\n🕐 *Hora de Recogida:* ${pickupTime}\n\n¿Podrían confirmar disponibilidad? ¡Gracias!`
+      ? `Hello! I'd like to reserve a car 🚗\n\n👤 *Name:* ${name}\n📧 *Email:* ${contactEmail}\n📱 *Phone:* ${contactPhone}\n\n📍 *Pickup Location:* ${locationName}\n🚘 *Vehicle Type:* ${vehicleName}\n📅 *Pickup Date:* ${pickup}\n📅 *Return Date:* ${returnD}\n🕐 *Pickup Time:* ${pickupTime}\n🕐 *Return Time:* ${returnTime}\n\nCould you confirm availability? Thank you!`
+      : `¡Hola! Me gustaría reservar un auto 🚗\n\n👤 *Nombre:* ${name}\n📧 *Correo:* ${contactEmail}\n📱 *Teléfono:* ${contactPhone}\n\n📍 *Lugar de Recogida:* ${locationName}\n🚘 *Tipo de Vehículo:* ${vehicleName}\n📅 *Fecha de Recogida:* ${pickup}\n📅 *Fecha de Devolución:* ${returnD}\n🕐 *Hora de Recogida:* ${pickupTime}\n🕐 *Hora de Devolución:* ${returnTime}\n\n¿Podrían confirmar disponibilidad? ¡Gracias!`
 
     // Send WhatsApp
     const whatsappNumber = "529902031942"
@@ -81,6 +82,7 @@ export function HeroSection() {
           pickupDate: pickup,
           returnDate: returnD,
           pickupTime,
+          returnTime,
         }),
       })
       setSent(true)
@@ -353,33 +355,33 @@ export function HeroSection() {
                     className="w-full pl-11 pr-10 py-2 rounded-xl text-sm border border-border bg-muted/30 text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer transition-all"
                   >
                     <option value="">{t("Any type", "Cualquier tipo")}</option>
-                    <optgroup label={t("Sedans", "Sedanes")}>
-                      <option value="Chevrolet Aveo Sedan">Chevrolet Aveo Sedan</option>
-                      <option value="Kia K3">Kia K3</option>
-                      <option value="Kia Rio">Kia Rio</option>
-                      <option value="Nissan Versa">Nissan Versa</option>
-                      <option value="Nissan Sentra">Nissan Sentra</option>
-                      <option value="Volkswagen Virtus">Volkswagen Virtus</option>
-                      <option value="Kia Forte">Kia Forte</option>
-                    </optgroup>
                     <optgroup label={t("Compact", "Compactos")}>
                       <option value="Chevrolet Aveo Hatchback">Chevrolet Aveo Hatchback</option>
                     </optgroup>
-                    <optgroup label="SUVs & Vans">
-                      <option value="Kia Sorento">Kia Sorento (7 seats)</option>
-                      <option value="Suzuki Ertiga">Suzuki Ertiga (7 seats)</option>
-                      <option value="Toyota Avanza">Toyota Avanza (7 seats)</option>
+                    <optgroup label={t("Sedans", "Sedanes")}>
+                      <option value="Chevrolet Aveo Sedan">Chevrolet Aveo Sedan</option>
                       <option value="Toyota Yaris">Toyota Yaris</option>
-                      <option value="Mitsubishi Xpander Cross">Mitsubishi Xpander Cross (7 seats)</option>
+                      <option value="Kia K3">Kia K3</option>
+                      <option value="Kia Rio">Kia Rio</option>
+                      <option value="Kia Forte">Kia Forte</option>
+                      <option value="Nissan Versa">Nissan Versa</option>
+                      <option value="Nissan Sentra">Nissan Sentra</option>
+                      <option value="Volkswagen Virtus">Volkswagen Virtus</option>
+                    </optgroup>
+                    <optgroup label="SUVs & Vans">
                       <option value="Toyota RAV4">Toyota RAV4</option>
                       <option value="BYD Song Plus">BYD Song Plus</option>
+                      <option value="Suzuki Ertiga">Suzuki Ertiga (7 seats)</option>
+                      <option value="Toyota Avanza">Toyota Avanza (7 seats)</option>
+                      <option value="Mitsubishi Xpander Cross">Mitsubishi Xpander Cross (7 seats)</option>
+                      <option value="Kia Sorento">Kia Sorento (7 seats)</option>
+                      <option value="Nissan Urvan">Nissan Urvan (12 seats)</option>
                     </optgroup>
                     <optgroup label="Scooters">
-                      <option value="Honda Scoopy 110">Honda Scoopy 110</option>
                       <option value="Italika Vitalia 150">Italika Vitalia 150</option>
                     </optgroup>
                     <optgroup label="Transfer">
-                      <option value="Nissan Urvan 12 Pasajeros">Nissan Urvan 12 Pasajeros</option>
+                      <option value="Nissan Urvan Transfer">Nissan Urvan Transfer</option>
                     </optgroup>
                   </select>
                   <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
@@ -425,6 +427,34 @@ export function HeroSection() {
                   <select
                     value={pickupTime}
                     onChange={(e) => setPickupTime(e.target.value)}
+                    className="w-full pl-11 pr-10 py-2 rounded-xl text-sm border border-border bg-muted/30 text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer transition-all"
+                  >
+                    <option>8:00 AM</option>
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                  </select>
+                  <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[10px] font-medium text-muted-foreground uppercase tracking-wider mb-1 truncate">
+                  {t("Return Time", "Hora Devolución")}
+                </label>
+                <div className="relative">
+                  <Clock className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-primary/60" />
+                  <select
+                    value={returnTime}
+                    onChange={(e) => setReturnTime(e.target.value)}
                     className="w-full pl-11 pr-10 py-2 rounded-xl text-sm border border-border bg-muted/30 text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer transition-all"
                   >
                     <option>8:00 AM</option>
