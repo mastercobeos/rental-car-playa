@@ -201,8 +201,8 @@ const vehicles = [
     doors: 4,
     ac: true,
     description: {
-      en: "Toyota reliability in a spacious 7-seat package. Room for the whole family plus luggage — ideal for airport pickups.",
-      es: "Confiabilidad Toyota en un paquete espacioso de 7 asientos. Espacio para toda la familia y equipaje — ideal para recogidas en aeropuerto.",
+      en: "Toyota reliability in a spacious 7-seat package. Room for the whole family plus luggage. Ideal for airport pickups.",
+      es: "Confiabilidad Toyota en un paquete espacioso de 7 asientos. Espacio para toda la familia y equipaje. Ideal para recogidas en aeropuerto.",
     },
     images: ["/fleet/avanza-blanco.webp"],
     price: 112,
@@ -216,8 +216,8 @@ const vehicles = [
     doors: 4,
     ac: true,
     description: {
-      en: "Rugged crossover with 7 seats and high ground clearance. Ready for any road — from highways to beach towns.",
-      es: "Crossover robusto con 7 asientos y altura al suelo elevada. Listo para cualquier camino — de carreteras a pueblos de playa.",
+      en: "Rugged crossover with 7 seats and high ground clearance. Ready for any road. From highways to beach towns.",
+      es: "Crossover robusto con 7 asientos y altura al suelo elevada. Listo para cualquier camino. De carreteras a pueblos de playa.",
     },
     images: ["/fleet/mitsubishi-xpander-clean.jpg"],
     price: 112,
